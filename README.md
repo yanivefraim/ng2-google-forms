@@ -1,5 +1,19 @@
 # Angular 2 Workshop: Google Forms Boilerplate
 
+## Introduction
+
+This repo contains very basic setup for Goolge Forms application. Follow the requirements/steps bellow in order to complete the application.
+
+1. Clicking on '+' should add a new form element
+2. Application should show form element list
+3. Each item should contain 'delete' button
+4. There should be a way to change form element type (input, multiple select, single select)
+5. Form element content suppose to be adjustable according to it's type
+6. Form should contain edit and view modes
+7. Save form data to some storage (cookies, local storage, filesystem)
+8. Form should contain routes for view and edit
+
+
 ## Install npm packages
 
 Install the npm packages described in the `package.json` and verify that it works:
