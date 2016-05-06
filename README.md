@@ -14,6 +14,21 @@ This repo contains very basic setup for Goolge Forms application. Follow the req
 8. Form should contain routes for view and edit
 
 
+## Run on Cloud9 (web env)
+
+1. Open account at Cloud9 (www.c9.io)
+2. Create new workspace in the new account (use HTML5 template)
+3. Click on the new workspace you've created
+4. Within Cloud9 editor terminal (bottom of the screen), execture the following commands:
+5. wget https://github.com/yanivefraim/ng2-google-forms/archive/master.zip
+6. unzip master.zip
+7. cd ng2-google-forms
+8. npm install
+9. npm start
+ 
+On the Cloud9 editor toolbar (top of the screen) click "Preview"
+New tab should appear within the editor and you should see a page with Google Forms Boilerplate
+
 ## Install npm packages
 
 Install the npm packages described in the `package.json` and verify that it works:
