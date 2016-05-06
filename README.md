@@ -29,7 +29,7 @@ This repo contains very basic setup for Goolge Forms application. Follow the req
 On the Cloud9 editor toolbar (top of the screen) click "Preview"
 New tab should appear within the editor and you should see a page with Google Forms Boilerplate
 
-## Install npm packages
+## Work on your machine
 
 Install the npm packages described in the `package.json` and verify that it works:
 
