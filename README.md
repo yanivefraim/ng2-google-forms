@@ -31,7 +31,7 @@ New tab should appear within the editor and you should see a page with Google Fo
 
 ## Work on your machine
 
-Install the npm packages described in the `package.json` and verify that it works:
+Clone this repo and install the npm packages described in the `package.json` and verify that it works:
 
 **Attention Windows Developers:  You must run all of these commands in administrator mode**
 
