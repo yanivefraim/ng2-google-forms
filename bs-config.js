@@ -9,6 +9,7 @@ module.exports = {
    ignored: 'node_modules'
  },
  server: {
-   baseDir: ['./', './app', './dist']
+   baseDir: ['./', './app', './dist'],
+   middleware: {0: null}
  }
 };
