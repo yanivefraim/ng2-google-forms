@@ -5,9 +5,9 @@ import FormElement from '../lib/form-element';
 @Component({
     selector: 'app',
     template: `
-      <h2>Angular 2 Google Form</h2>
+      <h2>Angular 2 Google Forms</h2>
       <div>
-        <form-block *ngFor="let block of blocks" [data]="block"></form-block>
+        <form-block *ngFor="let block of blocks" [data]="block" (remove)="handleRemove($event)"></form-block>
       </div>
       <button (click)="addFormBlock()">+</button>
     `,
@@ -18,5 +18,9 @@ export class AppComponent {
 
   addFormBlock() {
     this.blocks = [...this.blocks, new FormElement()];
+  }
+
+  handleRemove(block) {
+    this.blocks = this.blocks.filter(item => item !== block);
   }
 }
