@@ -140,6 +140,23 @@ nav a.router-link-active {
   border-radius: 4px 0 0 4px;
 }
 
+*, input, select, button {
+  font-size: 16px;
+  color: #555;
+}
+
+keygen, select {
+  -webkit-appearance: menulist-button;
+  border-radius: 0 !important;
+  background: transparent;
+  border: none;
+  outline: 1px solid rgb(238, 238, 238);
+}
+
+input[type="text"] {
+  width: 300px;
+}
+
 /* everywhere else */
 * {
   font-family: Arial, Helvetica, sans-serif;

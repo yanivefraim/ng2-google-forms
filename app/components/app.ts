@@ -11,7 +11,6 @@ import FormElement from '../lib/form-element';
           *ngFor="let block of blocks"
           [data]="block"
           (remove)="handleRemove($event)"
-          (change)="handleChange($event)"
         ></form-block>
       </div>
       <button (click)="addFormBlock()">+</button>
@@ -19,7 +18,10 @@ import FormElement from '../lib/form-element';
     directives: [FormBlock]
 })
 export class AppComponent {
-  blocks = [new FormElement()];
+  blocks = [
+    new FormElement('What is your name?'),
+    new FormElement('Your experience with Angular 1.x?', ['Up to 1 year', '1-3 years', 'More than 3 years'], 'single')
+  ];
 
   addFormBlock() {
     this.blocks = [...this.blocks, new FormElement()];
@@ -27,9 +29,5 @@ export class AppComponent {
 
   handleRemove(block) {
     this.blocks = this.blocks.filter(item => item !== block);
-  }
-
-  handleChange(data) {
-    // TODO: save data
   }
 }
