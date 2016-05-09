@@ -7,7 +7,12 @@ import FormElement from '../lib/form-element';
     template: `
       <h2>Angular 2 Google Forms</h2>
       <div>
-        <form-block *ngFor="let block of blocks" [data]="block" (remove)="handleRemove($event)"></form-block>
+        <form-block
+          *ngFor="let block of blocks"
+          [data]="block"
+          (remove)="handleRemove($event)"
+          (change)="handleChange($event)"
+        ></form-block>
       </div>
       <button (click)="addFormBlock()">+</button>
     `,
@@ -22,5 +27,9 @@ export class AppComponent {
 
   handleRemove(block) {
     this.blocks = this.blocks.filter(item => item !== block);
+  }
+
+  handleChange(data) {
+    // TODO: save data
   }
 }
