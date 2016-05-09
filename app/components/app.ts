@@ -1,29 +1,22 @@
 import {Component} from '@angular/core';
+import FormBlock from './form-block';
+import FormElement from '../lib/form-element';
 
 @Component({
     selector: 'app',
     template: `
-    <h3>Angular 2 Google Form</h3>
-    <ul>
-      <li *ngFor="let elem of data">{{elem | json}}</li>
-    </ul>
-    <button (click)="addFormElement()">+</button>`
+      <h2>Angular 2 Google Form</h2>
+      <div>
+        <form-block *ngFor="let block of blocks" [data]="block"></form-block>
+      </div>
+      <button (click)="addFormBlock()">+</button>
+    `,
+    directives: [FormBlock]
 })
 export class AppComponent {
-  data = [new FormElement()];
+  blocks = [new FormElement()];
 
-  addFormElement() {
-    this.data = [...this.data, new FormElement()];
+  addFormBlock() {
+    this.blocks = [...this.blocks, new FormElement()];
   }
-}
-
-export class FormElement {
-
-  constructor(
-    public title = 'New Item',
-    public type = 'input',
-    public value = '',
-    public required = false) {
-      //
-    }
 }
