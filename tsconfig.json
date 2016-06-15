@@ -4,10 +4,11 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
+    "outDir": "dist/",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": false,
-    "suppressImplicitAnyIndexErrors": true
+    "noImplicitAny": false
   },
   "exclude": [
     "node_modules",
